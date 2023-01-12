@@ -7,5 +7,4 @@ Input the platemap as an Excel spreadsheet with a series of vertically stacked
 Input the caginstability.ml output.  
 The plate name prefix must match in the platemap and sample file names.  
 
-
 by Mike Flower, 10/5/23
