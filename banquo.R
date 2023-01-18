@@ -94,12 +94,12 @@ data_annotated <- platemap_long %>%
 summary <- data.frame(
   data_annotated %>%
   group_by(name) %>%
-  summarise_if(is.numeric, 
+  dplyr::summarise_if(is.numeric, 
                list(mean = mean, sd = sd),
                na.rm = T) %>%
   left_join(data_annotated %>%
               group_by(name) %>%
-              summarise(n = n()),
+              dplyr::summarise(n = n()),
             by = "name") %>%
   relocate(name, n) %>%
   mutate_all(~ifelse(is.nan(.), NA, .))
